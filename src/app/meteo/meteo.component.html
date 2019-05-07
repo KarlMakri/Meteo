@@ -1,0 +1,22 @@
+<div class="container">
+
+  <button class="btn btn-info" (click)="login()">Login</button>&nbsp;
+  <button class="btn btn-warning" (click)="logout()">Log out</button>&nbsp;
+  <!--<button onclick=""></button>-->
+  <br>
+  {{ connected }}
+
+  <br>
+  <div class="p-5" [ngClass]="{'bg-success': connected, 'bg-primary': !connected}">
+    Class who Change Color
+  </div>
+<br>
+  <div class="p-5 bg-info" *ngIf="connected">
+      I'm In
+  </div>
+
+  <div class="p-5 bg-warning" *ngIf="!connected">
+      Bye Bye I'm Out
+  </div>
+
+</div>
